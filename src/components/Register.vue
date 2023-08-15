@@ -40,7 +40,7 @@ export default {
     }
   },
   methods: {
-    handleSubmit () {
+    async handleSubmit () {
       const data = {
         firstName: this.firstName,
         lastName: this.lastName,
@@ -49,11 +49,10 @@ export default {
         passwordConfirm: this.passwordConfirm
       }
       console.log(data)
-      axios.post('http://localhost:8888/user/regist', data).then(res => {
-        console.log(res)
-      }).catch(err => {
-        console.log(err)
-      })
+      const response = await axios.post('user/register', data)
+
+      console.log(response)
+      this.$router.push('/login')
     }
   }
 }
