@@ -76,10 +76,11 @@ export default {
   height: 100vh;
   width: 240px;
   left: 0;
-  top: 0;
+  top: 56px;
   border-right: 1px solid #ececec;
   transition: all .3s ease;
   overflow: auto;
+  background-color: #ffffff;
 
   i {
     position: fixed;

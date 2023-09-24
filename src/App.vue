@@ -2,11 +2,12 @@
   <div id="app">
     <Nav/>
     <Menu/>
-    <div class="auth-wrapper">
-      <div class="auth-inner">
-        <router-view/>
-      </div>
-    </div>
+    <Main/>
+    <!--    <div class="auth-wrapper">-->
+    <!--      <div class="auth-inner">-->
+    <!--        <router-view/>-->
+    <!--      </div>-->
+    <!--    </div>-->
   </div>
 </template>
 
@@ -14,12 +15,14 @@
 import Nav from './components/Nav.vue'
 import axios from 'axios'
 import Menu from './components/Menu.vue'
+import Main from './components/Main.vue'
 
 export default {
   name: 'App',
   components: {
     Nav,
-    Menu
+    Menu,
+    Main
   },
   async created () {
     const response = await axios.get('/api/v1/auth/user')
@@ -36,7 +39,7 @@ export default {
 }
 
 body {
-  background: #1C8EF9 !important;
+  background: #ffffff !important;
   min-height: 100vh;
   display: flex;
   font-weight: 400;
@@ -60,23 +63,6 @@ body, html, #app, #root, .auth-wrapper {
 .navbar-light {
   background-color: #ffffff;
   box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-}
-
-.auth-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
-}
-
-.auth-inner {
-  width: 450px;
-  margin: auto;
-  background: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-  padding: 40px 55px 45px 55px;
-  border-radius: 15px;
-  transition: all .3s;
 }
 
 .auth-wrapper .form-control:focus {
