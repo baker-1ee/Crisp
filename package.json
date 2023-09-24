@@ -16,6 +16,8 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.3.1",
     "bootstrap-vue": "^2.23.1",
+    "sass": "^1.68.0",
+    "sass-loader": "^7.3.1",
     "vue": "^2.7.14",
     "vue-router": "^3.0.1",
     "vuex": "^3.6.2"

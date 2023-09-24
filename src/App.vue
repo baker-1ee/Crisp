@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Nav/>
-
+    <Menu/>
     <div class="auth-wrapper">
       <div class="auth-inner">
         <router-view/>
@@ -13,11 +13,13 @@
 <script>
 import Nav from './components/Nav.vue'
 import axios from 'axios'
+import Menu from './components/Menu.vue'
 
 export default {
   name: 'App',
   components: {
-    Nav
+    Nav,
+    Menu
   },
   async created () {
     const response = await axios.get('/api/v1/auth/user')
